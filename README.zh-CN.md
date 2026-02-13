@@ -89,8 +89,4 @@ xcodegen generate
 xcodebuild -project Chess3D.xcodeproj -scheme Chess3D -configuration Debug build
 ```
 
----
-
-**[Original](README.md)** | 中文
-
 Happy Chess! ♟️
