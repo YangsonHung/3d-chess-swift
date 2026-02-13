@@ -1,3 +1,5 @@
+[English](README.md) | [中文](README.zh-CN.md)
+
 # Chess3D - 3D Chess
 
 A native macOS 3D chess game

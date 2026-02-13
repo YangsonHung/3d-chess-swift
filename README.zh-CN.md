@@ -1,3 +1,5 @@
+[English](README.md) | [中文](README.zh-CN.md)
+
 # Chess3D - 3D 国际象棋
 
 macOS 原生 3D 国际象棋游戏
