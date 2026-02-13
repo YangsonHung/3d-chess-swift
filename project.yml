@@ -1,0 +1,44 @@
+name: Chess3D
+options:
+  bundleIdPrefix: com.chess3d
+  deploymentTarget:
+    macOS: "12.0"
+  xcodeVersion: "15.0"
+
+packages:
+  SwiftChess:
+    url: https://github.com/SteveBarnegren/SwiftChess
+    from: "1.0.0"
+
+targets:
+  Chess3D:
+    type: application
+    platform: macOS
+    sources:
+      - path: Chess3D
+        excludes:
+          - "**/.DS_Store"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.chess3d.app
+        PRODUCT_NAME: Chess3D
+        INFOPLIST_FILE: Chess3D/Info.plist
+        MACOSX_DEPLOYMENT_TARGET: "12.0"
+        SWIFT_VERSION: "5.9"
+        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_STYLE: Manual
+        DEVELOPMENT_TEAM: ""
+        COMBINE_HIDPI_IMAGES: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    dependencies:
+      - package: SwiftChess
+
+schemes:
+  Chess3D:
+    build:
+      targets:
+        Chess3D: all
+    run:
+      config: Debug
+    archive:
+      config: Release
